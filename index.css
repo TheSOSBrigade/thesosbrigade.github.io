@@ -7,6 +7,20 @@ html, body {
 	font-family: "Times New Roman", Times, serif;
 }
 
+button{
+    position:absolute;
+    top:1px;
+    left:1px;
+	transform: translate(-50%, -50%);
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .footer {
 	overflow: hidden;
 	position: relative;
@@ -14,24 +28,15 @@ html, body {
 	height:"3%";
 }
 
-.footer a {
+a {
 	color: black;
 	text-align: center;
 	text-decoration: none;
-	font-size: 14px;
 }
 
 .footer a:hover {
-	text-decoration: underline;
+	font-weight: bold;
 	color: black;
-}
-
-img {
-    height: 17.5%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .middle {
