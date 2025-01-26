@@ -40,3 +40,17 @@ a {
 .footer a:hover {
 	font-weight: bold;
 }
+
+@media screen and (orientation: portrait) {
+    html, body {
+        font-size: 120%; 
+    }
+
+    .footer {
+        font-size: 110%; 
+    }
+
+    a {
+        font-size: 120%; 
+    }
+}
