@@ -7,18 +7,15 @@ html, body {
 	font-family: "Times New Roman", Times, serif;
 }
 
-button{
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-	transform: translate(-50%, -50%);
-}
-
-img {
+img, button {
     position: absolute;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
+}
+
+.flag {
+	height: 30%;
 }
 
 .wrapper {
@@ -42,5 +39,4 @@ a {
 
 .footer a:hover {
 	font-weight: bold;
-	color: black;
 }
