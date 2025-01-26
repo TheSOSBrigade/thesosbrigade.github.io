@@ -4,3 +4,7 @@ $('button').on('mouseover', function() {
     'left': Math.random() * (window.innerWidth - $('button').width() / 1.5 + 1) + "px"
   });
 })
+
+window.addEventListener("load", (event) => {
+  new cursoreffects.bubbleCursor();
+});
