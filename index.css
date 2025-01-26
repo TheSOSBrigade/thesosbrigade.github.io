@@ -47,10 +47,11 @@ a {
     }
 
     .footer {
-        font-size: 110%; 
+        font-size: 120%; 
     }
-
-    a {
+	
+	button {
+        width: 120%;  
         font-size: 120%; 
     }
 }
