@@ -5,6 +5,10 @@ $('button').on('mouseover', function() {
   });
 })
 
+window.addEventListener("load", (event) => {
+  new cursoreffects.bubbleCursor();
+});
+
 $('.drag')
   .drag(function( ev, dd ){
       $( this ).css({
@@ -12,7 +16,3 @@ $('.drag')
           left: dd.offsetX
       });
   });
-
-window.addEventListener("load", (event) => {
-  new cursoreffects.bubbleCursor();
-});
