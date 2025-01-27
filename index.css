@@ -7,15 +7,18 @@ html, body {
 	font-family: "Times New Roman", Times, serif;
 }
 
-img, button {
+.dead-center {
     position: absolute;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
 }
 
-.flag {
-	height: 20%;
+.drag {
+	position: absolute;
+	cursor: move;
+	user-select: none;
+	draggable: none;
 }
 
 .wrapper {
