@@ -18,7 +18,7 @@ html, body {
 	position: absolute;
 	cursor: move;
 	user-select: none;
-	draggable: none;
+    -webkit-user-drag: none;
 }
 
 .wrapper {

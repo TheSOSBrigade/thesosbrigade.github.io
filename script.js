@@ -5,14 +5,36 @@ $('button').on('mouseover', function() {
   });
 })
 
-$('.drag')
-  .drag(function( ev, dd ){
-      $( this ).css({
-          top: dd.offsetY,
-          left: dd.offsetX
-      });
+function makeDraggable(element) {
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  element.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - element.getBoundingClientRect().left;
+      offsetY = e.clientY - element.getBoundingClientRect().top;
+      element.style.cursor = 'grabbing';
   });
 
-window.addEventListener("load", (event) => {
-  new cursoreffects.bubbleCursor();
+  document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+          element.style.left = `${e.clientX - offsetX}px`;
+          element.style.top = `${e.clientY - offsetY}px`;
+      }
+  });
+
+  document.addEventListener('mouseup', () => {
+      isDragging = false;
+      element.style.cursor = 'grab';
+  });
+}
+
+// Apply draggable functionality to all images
+const divs = document.querySelectorAll('.drag');
+divs.forEach(div => {
+  makeDraggable(div);
 });
+
+/* window.addEventListener("load", (event) => {
+  new cursoreffects.bubbleCursor();
+}); */
